@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
@@ -28,57 +29,40 @@ const Navbar = () => {
       {/* nav - start */}
       <nav className="hidden gap-12 lg:flex">
         <a
-          href="#"
+          href="/"
           className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
         >
           Home
         </a>
-        <a
-          href="#"
-          className="inline-flex items-center gap-1 text-lg font-semibold text-indigo-500"
-        >
-          Features
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-800"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
-        <a
-          href="#"
+        
+        <Link
+          href="/login"
           className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
         >
-          Pricing
-        </a>
-        <a
-          href="#"
+          login
+        </Link>
+        <Link
+          href="/signup"
           className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
         >
-          About
-        </a>
+          signup
+        </Link>
       </nav>
       {/* nav - end */}
       {/* buttons - start */}
       <div className="-ml-8 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
-        <a
-          href="#"
+        <Link
+          href="/login"
           className="inline-block rounded-lg px-4 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:text-indigo-500 focus-visible:ring active:text-indigo-600 md:text-base"
         >
           Sign in
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          href="/signup"
           className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
         >
           Sign up
-        </a>
+        </Link>
       </div>
       <button
         type="button"
